@@ -1,0 +1,65 @@
+#MPage8 {
+margin-left: 0px;
+margin-top: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+}
+#MPage8 #MPage8_form {
+margin-bottom: 0px;
+}
+#MPage8 #MPage8_table {
+width: 360px;
+height: 640px;
+border-width:0;
+border-collapse:separate;
+}
+#MPage8 #MPage8_table td, #MPage8 #MPage8_table th {
+padding:0;
+vertical-align:top;
+}
+#MPage8 #MLabel1_outer {
+z-index: 0;
+left: 55px;
+width: 75px;
+height: 20px;
+position: absolute;
+top: 40px;
+
+}
+#MPage8 #MLabel1 {
+ font-family: Helvetica, Arial, sans-serif;
+ font-size: 16px;
+  width: 75px;
+height: 20px;
+}
+#MPage8 #MMap1_outer {
+z-index: 1;
+left: 35px;
+width: 307px;
+height: 523px;
+position: absolute;
+top: 83px;
+
+}
+#MPage8 #MMap1_border{ 
+box-sizing:border-box;
+width: 307px;
+height: 523px;
+} 
+#MPage8 #MMap1_border{ 
+} 
+#MPage8 #MLabel2_outer {
+z-index: 2;
+left: 254px;
+width: 93px;
+height: 20px;
+position: absolute;
+top: 56px;
+
+}
+#MPage8 #MLabel2 {
+ font-family: Helvetica, Arial, sans-serif;
+ font-size: 12px;
+  width: 93px;
+height: 20px;
+}
