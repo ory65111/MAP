@@ -64,3 +64,56 @@ var Geolocation1_ID = null;
         Geolocation1_ID = null;
       }
       
+	  
+	  // This is where you can place your Javascript code
+function Geolocation1Change(event) {
+ var yourStartLatLng= new google.maps.LatLng(event.coords.latitude,event.coords.longitude);
+
+     var mapOptions = {
+        center: yourStartLatLng,
+        zoom: 18,
+        mapTypeId: google.maps.MapTypeId.ROADMAP};
+
+   // $('#MMap1').gmap('option','center',yourStartLatLng);
+    map = new google.maps.Map(document.getElementById("MMap1"), mapOptions);
+
+    var markerOptions = {
+    position: yourStartLatLng,
+    map:  map,
+    animation: google.maps.Animation.DROP,
+    clickable: true
+    };
+    var marker = new google.maps.Marker(markerOptions);
+
+    $('#MLabel1').html(
+        event.coords.latitude
+        +","
+        +event.coords.longitude+" .");
+
+}
+function MLabel2Click(event) {
+
+    GeolocationActivate();
+}
+
+
+var Geolocation_ID = null;
+      var GeolocationActivate=function(options) {
+        var options = options || {enableHighAccuracy: true, timeout: 10000, maximumAge: 10000}
+        Geolocation_ID = navigator.geolocation.watchPosition(Geolocation1Change, Geolocation1Error,options);
+        };
+
+      var GeolocationRetrieve=function(options) {
+        var options = options || {enableHighAccuracy: true, timeout: 10000, maximumAge: 10000}
+        Geolocation_ID = navigator.geolocation.getCurrentPosition(Geolocation1Change, Geolocation1Error,options);
+        };
+
+      var GeolocationDeactivate=function() {
+        navigator.geolocation.clearWatch(Geolocation_ID);
+        Geolocation_ID = null;
+      }
+
+
+function Geolocation1Error(event) {
+/**/
+}
